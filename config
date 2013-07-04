@@ -1,0 +1,13 @@
+# Add this file to ~/.ssh/ of the local machine
+# Also place the .pem file downloaded from AWS in the same folder
+# This will help to easily connect to remote EC2 instance
+# Ex: $ ssh awshost1
+
+Host awshost1
+#name of the remote machine that you want to use while sshing in
+HostName ec2-**-***-*-**.us-west-2.compute.amazonaws.com 
+#Replace the *** with the public name from AWS EC2 dashboard
+User ubuntu
+IdentityFile "~/.ssh/xxx.pem"
+#Replace xxx with the name of the pem file downloaded from AWS while creating the new EC2 instance
+
